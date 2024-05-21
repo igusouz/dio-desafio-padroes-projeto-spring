@@ -1,9 +1,9 @@
 package igor.souza.gof.service.impl;
 
 import igor.souza.gof.model.Cliente;
-import igor.souza.gof.model.ClienteRepository;
+import igor.souza.gof.repository.ClienteRepository;
 import igor.souza.gof.model.Endereco;
-import igor.souza.gof.model.EnderecoRepository;
+import igor.souza.gof.repository.EnderecoRepository;
 import igor.souza.gof.service.ClienteService;
 import igor.souza.gof.service.ViaCepService;
 import org.springframework.beans.factory.annotation.Autowired;

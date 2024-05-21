@@ -2,21 +2,23 @@ package igor.souza.gof.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import springfox.documentation.builders.PathSelectors;
-import springfox.documentation.builders.RequestHandlerSelectors;
-import springfox.documentation.spi.DocumentationType;
-import springfox.documentation.spring.web.plugins.Docket;
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.info.Info;
+import io.swagger.v3.oas.models.info.Contact;
 
 @Configuration
 public class SwaggerConfig {
 
     @Bean
-    public Docket api() {
-        return new Docket(DocumentationType.SWAGGER_2)
-
-                .select()
-                .apis(RequestHandlerSelectors.basePackage("igor.souza.gof.controller"))
-                .paths(PathSelectors.any())
-                .build();
+    public OpenAPI customOpenAPI() {
+        return new OpenAPI()
+                .info(new Info()
+                        .title("API de Padrões de Projeto")
+                        .version("1.0")
+                        .description("Documentação da API de Padrões de Projeto em Spring Boot")
+                        .contact(new Contact()
+                                .name("Ígor Souza")
+                                .url("https://www.linkedin.com/in/igusouz/")
+                                .email("igorrafael.jobs@gmail.com")));
     }
 }

@@ -1,5 +1,6 @@
-package igor.souza.gof.model;
+package igor.souza.gof.repository;
 
+import igor.souza.gof.model.Endereco;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
